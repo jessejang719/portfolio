@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+/* 초기설정 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul {list-style: none;}
+a {text-decoration: none; color: #333;}
+img {vertical-align: middle;} 
+body {font-family: Pretendard,'Noto Sans KR', sans-serif; line-height: 1.5;
+background-color: #111; overflow-x: hidden;}
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.left {float: left;}
+.right {float: right;}
+
+/* biff story */
+.biffstory {
+    width: 100vw;
+}
+.biffstory .inner {
+    width: 1264px;
+    margin: 0 auto;
+}
+.biffstory .inner .bs-title {
+    margin-bottom: 24px;
+    font-size: 44px;
+    font-weight: 700;
+    color: #fff;
+}
+.biffstory .inner .story-wrap {
+    display: flex;
+}
+
+/* story - main */
+.biffstory .inner .story-wrap .story-left {
+    display: block;
+    width: 51.5%;
+    margin-right: 70px;
+}
+.biffstory .inner .story-wrap .story-left .main {}
+.biffstory .inner .story-wrap .story-left .main .thumb {
+    overflow: hidden;
+    position: relative;
+    border-radius: 6px;
+}
+.biffstory .inner .story-wrap .story-left .main .thumb::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 125px;
+    background: linear-gradient(0deg, #111 0%, rgba(17, 17, 17, 0) 100%);
+}
+.biffstory .inner .story-wrap .story-left .main .thumb img {
+    width: 100%;
+}
+.biffstory .inner .story-wrap .story-left .main .detail {
+    position: relative;
+    margin-top: -20px;
+}
+.biffstory .inner .story-wrap .story-left .main .detail .subject {
+    color: #fff;
+    font-size: 25px;
+    line-height: 1.1;
+    margin-bottom: 13px;
+    font-weight: 700;
+}
+.biffstory .inner .story-wrap .story-left .main .detail .explain {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 13px;
+}
+.biffstory .inner .story-wrap .story-left .main .detail .btn-more {
+    line-height: 2;
+    padding: 5px 20px 5px 0;
+    color: #fff;
+    font-size: 15px;
+    background: url('../images/cmm/arrow_small.svg') no-repeat 100% 50%;
+}
+
+/* story - right(list) */
+.biffstory .inner .story-wrap .story-right {
+    width: 543.05px;
+    display: block;
+}
+.biffstory .inner .story-wrap .story-right .story-list {
+    margin-bottom: 48px;
+}
+.biffstory .inner .story-wrap .story-right .story-list .box {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.biffstory .inner .story-wrap .story-right .story-list .box:first-child {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.biffstory .inner .story-wrap .story-right .story-list .box .thumb {
+    width: 120px;
+    height: 80px;
+    background: rgba(60, 60, 60, 0.4);
+    border-radius: 4px;
+}
+.biffstory .inner .story-wrap .story-right .story-list .box .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.biffstory .inner .story-wrap .story-right .story-list .box .detail {
+    padding-left: 16px;
+}
+.biffstory .inner .story-wrap .story-right .story-list .box .detail .subject {
+    font-weight: bold;
+    color: #fff;
+    font-size: 17px;
+    word-break: keep-all;
+    line-height: 1.4;
+}
+.biffstory .inner .story-wrap .story-right .story-list .box .detail .explain {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+}
+
+/* story - button */
+.biffstory .inner .story-wrap .story-right .news-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 50px;
+    background: #d9002e url('../images/cmm/symbol-b.svg') no-repeat left 16px top 50%;
+    border-radius: 4px;
+}
+.biffstory .inner .story-wrap .story-right .news-banner p {
+    color: #fff;
+    padding-right: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.biffstory .inner .story-wrap .story-right .news-banner a {
+    padding: 5px 20px 5px 0;
+    color: #fff;
+    width: 107px;
+    font-size: 16px;
+}

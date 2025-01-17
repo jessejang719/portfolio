@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/* 초기설정 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul {list-style: none;}
+a {text-decoration: none; color: #333;}
+img {vertical-align: middle;} 
+body {font-family: Pretendard,'Noto Sans KR', sans-serif; line-height: 1.5;
+background-color: #111;}
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.left {float: left;}
+.right {float: right;}
+
+/* official */
+.official {
+    width: 100vw;
+    margin-bottom: 110px;
+}
+
+.official .inner {
+    max-width: 1370px;
+    margin: 0 auto;
+}
+
+.official .inner .of-title {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.official .inner .sw-official {
+    width: 100%;
+    overflow: hidden;
+    perspective: 1200px;
+    padding: 32px 0;
+}
+
+.official .inner .sw-official .swiper-wrapper {
+
+}
+
+.official .inner .sw-official .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.official .inner .sw-official .swiper-slide .thumb {
+    padding-bottom: 56.25%;
+    border-radius: 12px;
+}

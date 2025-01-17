@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+/* 초기설정 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul {list-style: none;}
+a {text-decoration: none; color: #333;}
+img {vertical-align: middle;} 
+body {font-family: Pretendard,'Noto Sans KR', sans-serif; line-height: 1.5;
+background-color: #111;}
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.left {float: left;}
+.right {float: right;}
+
+
+
+/* =========event=========== */
+.event {
+    width: 100vw;
+    margin-bottom: 100px;
+}
+.event .inner {
+    position: relative;
+    max-width: 1264px;
+    margin: 0 auto;
+}
+.event .inner .ev-title {
+    margin-bottom: 24px;
+    font-size: 44px;
+    font-weight: 700;
+    color: #fff;
+}
+.event .inner .sw-event {
+    width: 100%;
+}
+.event .inner .sw-event .event-detail {}
+.event .inner .sw-event .event-detail .box {
+    position: relative;
+    width: 304px !important;
+    margin: 0 8px;
+}
+.event .inner .sw-event .event-detail .box::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    content: "";
+    width: 304px;
+    height: 270px;
+    display: block;
+    background: linear-gradient(to bottom, rgba(48, 47, 54, 0) 30%, rgba(48, 47, 54, 1) 80%);
+    border-radius: 6px;
+}
+.event .inner .sw-event .event-detail .box:nth-child(4n+1)::after {
+    background: linear-gradient(to bottom, rgba(48, 47, 54, 0) 30%, rgba(48, 47, 54, 1) 80%);
+}
+.event .inner .sw-event .event-detail .box:nth-child(4n+2)::after {
+    background: linear-gradient(to bottom, rgba(104, 51, 31, 0) 30%, rgba(104, 51, 31, 1) 80%);
+}
+.event .inner .sw-event .event-detail .box:nth-child(4n+3)::after {
+    background: linear-gradient(to bottom, rgba(27, 31, 77, 0) 30%, rgba(27, 31, 77, 1) 80%);
+}
+.event .inner .sw-event .event-detail .box:nth-child(4n+4)::after {
+    background: linear-gradient(to bottom, rgba(138, 69, 48, 0) 30%, rgba(138, 69, 48, 1) 80%);
+}
+.event .inner .sw-event .event-detail .box .thumb {
+    width: 304px;
+    height: 270px;
+}
+.event .inner .sw-event .event-detail .box .thumb img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+.event .inner .sw-event .event-detail .box .detail {
+    width: 100%;
+    z-index: 9;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: 0 20px 20px;
+}
+.event .inner .sw-event .event-detail .box .detail .name {
+    display: block;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1;
+    font-weight: 400;
+}
+.event .inner .sw-event .event-detail .box .detail .subject {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+.event .inner .sw-event .event-detail .box .detail .subject.other {
+    font-size: 16px;
+}
+.event .inner .sw-event .event-detail .box .detail .location {
+    display: block;
+    font-size: 13px;
+    font-weight: 300;
+    color: #fff;
+}
+.event .inner .sw-event .event-detail .box .detail .date {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-weight: 400;
+}
+.event .inner .sw-event .event-detail .box:nth-child(4n+1) .detail .date {color: #d1ccef;}
+.event .inner .sw-event .event-detail .box:nth-child(4n+2) .detail .date {color: #ffc0a8;}
+.event .inner .sw-event .event-detail .box:nth-child(4n+3) .detail .date {color: #a9b0ff;}
+.event .inner .sw-event .event-detail .box:nth-child(4n+4) .detail .date {color: #ffb097;}
+.event .inner .swiper-button-next::after{
+    position: absolute;
+    top: 50%;
+    left: 150%;
+    content: "" !important;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background: url('../images/cmm/arrow_large.svg') no-repeat 50% 50%;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+.event .inner .swiper-button-prev::after{
+    position: absolute;
+    top: 50%;
+    right: 150%;
+    content: "" !important;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background: url('../images/cmm/arrow_large.svg') no-repeat 50% 50%;
+    opacity: 0.3;
+    transform: rotate(180deg);
+    transition: all 0.3s;
+}
+.event .inner .swiper-button-next:hover::after, .event .inner .swiper-button-prev:hover::after {
+    opacity: 0.6;
+}
+.event .inner .more {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+.event .inner .more > a {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 20px 5px 0;
+    background: url('../images/cmm/arrow_small.svg') no-repeat 100% 50%;
+}
